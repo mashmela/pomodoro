@@ -25,7 +25,7 @@ export class SettingsStore {
   @observable longBreakInterval = 15;
   @observable maxPomodoros = 4;
   @observable breakThemeEnabled = true;
-  @observable baseTheme: "light" | "dark" = "dark";
+  @observable baseTheme: "light" | "dark" = "light";
 
   @observable oldPassword = "";
   @observable newPassword = "";
