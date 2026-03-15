@@ -1,6 +1,6 @@
 import { sendApiRequest } from "./apiRequest";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_BASE_API;
 
 export const usersApi = {
   updatePassword: async (oldPassword: string, newPassword: string) => {

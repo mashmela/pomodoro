@@ -8,7 +8,7 @@ import { UserInterface } from "types/userTypes";
 
 import { pomodoroStore } from "./PomodoroStore";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_BASE_API;
 
 const JSON_HEADERS = { "Content-Type": "application/json" };
 
