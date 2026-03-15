@@ -20,7 +20,7 @@ export class SettingsStore {
     });
   }
 
-  @observable interval = 1;
+  @observable interval = 25;
   @observable shortBreakInterval = 5;
   @observable longBreakInterval = 15;
   @observable maxPomodoros = 4;
