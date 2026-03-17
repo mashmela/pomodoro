@@ -11,6 +11,12 @@ export const viewStyles = style({
   width: "100%",
   height: "100%",
   overflow: "hidden",
+
+  "@media": {
+    "(max-width: 768px)": {
+      gap: "18px",
+    },
+  },
 });
 
 export const modeLabelStyles = style({
@@ -44,6 +50,12 @@ export const comletedButtonStyles = style({
   ":hover": {
     color: vars.color.text,
   },
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "11px",
+    },
+  },
 });
 
 export const buttonsContainerStyles = style({
@@ -51,6 +63,13 @@ export const buttonsContainerStyles = style({
   alignItems: "center",
   justifyContent: "center",
   gap: "12px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      gap: "10px",
+      flexWrap: "wrap",
+    },
+  },
 });
 
 export const buttonStyles = style({
@@ -79,6 +98,13 @@ export const buttonStyles = style({
 
   ":active": {
     transform: "scale(0.96)",
+  },
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "11px 20px",
+      fontSize: "13px",
+    },
   },
 });
 

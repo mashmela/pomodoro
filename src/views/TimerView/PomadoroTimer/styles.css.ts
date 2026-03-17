@@ -11,6 +11,13 @@ const circleBase = style({
   height: "56px",
   borderRadius: "50%",
   transition: "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+
+  "@media": {
+    "(max-width: 768px)": {
+      width: "44px",
+      height: "44px",
+    },
+  },
 });
 
 export const pomadoroStyles = recipe({

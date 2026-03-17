@@ -12,6 +12,13 @@ export const calendarStyles = style({
   WebkitBackdropFilter: vars.color.glassBlur,
   boxShadow: vars.color.glassShadow,
   transition: "background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease",
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "16px 12px 14px",
+      borderRadius: "20px",
+    },
+  },
 });
 
 export const calendarHeaderStyles = style({
@@ -19,12 +26,24 @@ export const calendarHeaderStyles = style({
   alignItems: "center",
   justifyContent: "space-between",
   marginBottom: "20px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      marginBottom: "14px",
+    },
+  },
 });
 
 export const monthLabelStyles = style({
   fontSize: "16px",
   fontWeight: 600,
   color: vars.color.text,
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "14px",
+    },
+  },
 });
 
 export const arrowButtonStyles = style({
@@ -54,12 +73,26 @@ export const arrowButtonStyles = style({
     backgroundColor: vars.color.glass,
     color: vars.color.textMuted,
   },
+
+  "@media": {
+    "(max-width: 768px)": {
+      width: "30px",
+      height: "30px",
+      fontSize: "16px",
+    },
+  },
 });
 
 export const calendarGridStyles = style({
   display: "grid",
   gridTemplateColumns: "repeat(7, 1fr)",
   gap: "4px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      gap: "2px",
+    },
+  },
 });
 
 export const dayHeaderStyles = style({
@@ -70,6 +103,13 @@ export const dayHeaderStyles = style({
   padding: "6px 0 10px",
   letterSpacing: "0.04em",
   textTransform: "uppercase",
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "10px",
+      padding: "4px 0 6px",
+    },
+  },
 });
 
 export const dayCellStyles = style({
@@ -89,6 +129,16 @@ export const dayCellStyles = style({
   ":hover": {
     backgroundColor: vars.color.glassHover,
   },
+
+  "@media": {
+    "(max-width: 768px)": {
+      minHeight: "48px",
+      padding: "6px 2px 4px",
+      gap: "4px",
+      fontSize: "11px",
+      borderRadius: "8px",
+    },
+  },
 });
 
 export const pomodoroCircleStyles = style({
@@ -102,4 +152,12 @@ export const pomodoroCircleStyles = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+
+  "@media": {
+    "(max-width: 768px)": {
+      width: "18px",
+      height: "18px",
+      fontSize: "9px",
+    },
+  },
 });

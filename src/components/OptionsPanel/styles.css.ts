@@ -34,7 +34,8 @@ export const optionsPanelContainerStyles = style({
 
   "@media": {
     "(max-width: 768px)": {
-      width: "85%",
+      width: "min(100vw - 20px, 360px)",
+      borderRadius: "20px 0 0 20px",
     },
   },
 });
@@ -50,6 +51,12 @@ export const optionsHeaderStyles = style({
   padding: "24px 24px 16px",
   borderBottom: `2px solid ${vars.color.inputBorder}`,
   marginBottom: "8px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "18px 16px 14px",
+    },
+  },
 });
 
 export const optionsTitleStyles = style({
@@ -58,6 +65,12 @@ export const optionsTitleStyles = style({
   color: vars.color.text,
   margin: 0,
   letterSpacing: "-0.3px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "18px",
+    },
+  },
 });
 
 export const closeButtonStyles = style({
@@ -80,10 +93,23 @@ export const closeButtonStyles = style({
   ":active": {
     transform: "scale(0.95)",
   },
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "24px",
+      padding: "6px 10px",
+    },
+  },
 });
 
 export const optionsListStyles = style({
   padding: "8px 16px 24px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "6px 12px 18px",
+    },
+  },
 });
 
 export const optionItemStyles = style({
@@ -109,6 +135,13 @@ export const optionItemStyles = style({
 
   ":active": {
     transform: "translateX(3px)",
+  },
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "14px 16px",
+      fontSize: "14px",
+    },
   },
 });
 
@@ -154,10 +187,23 @@ export const noOptionsStyles = style({
   color: vars.color.textMuted,
   fontSize: "16px",
   fontStyle: "italic",
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "28px 16px",
+      fontSize: "14px",
+    },
+  },
 });
 
 export const optionGroupStyles = style({
   marginBottom: "16px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      marginBottom: "12px",
+    },
+  },
 });
 
 export const optionGroupTitleStyles = style({
@@ -167,4 +213,11 @@ export const optionGroupTitleStyles = style({
   color: vars.color.textMuted,
   textTransform: "uppercase",
   letterSpacing: "0.5px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "10px 16px 6px",
+      fontSize: "12px",
+    },
+  },
 });

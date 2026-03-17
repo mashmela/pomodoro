@@ -4,6 +4,14 @@ export const userContainerStyles = style({
   display: "flex",
   flexDirection: "column",
   gap: "24px",
-  minWidth: "900px",
+  width: "100%",
+  maxWidth: "900px",
   margin: "0 auto",
+
+  "@media": {
+    "(max-width: 768px)": {
+      gap: "16px",
+      maxWidth: "100%",
+    },
+  },
 });

@@ -31,6 +31,15 @@ export const inputsContainerStyles = style({
   WebkitBackdropFilter: vars.color.glassBlur,
   boxShadow: vars.color.glassShadow,
   minWidth: "320px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      minWidth: 0,
+      width: "100%",
+      padding: "24px 18px",
+      borderRadius: "20px",
+    },
+  },
 });
 
 export const errorTextStyles = style({

@@ -19,7 +19,6 @@ function LoginForm() {
     <ThemeProvider>
       <MenuActions />
       <Background />
-      <MenuActions />
       <div className={pageWrapperStyles}>
         <LoginView />
       </div>

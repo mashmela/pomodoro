@@ -6,6 +6,12 @@ export const containerStyles = style({
   display: "flex",
   flexDirection: "column",
   gap: "24px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      gap: "16px",
+    },
+  },
 });
 
 export const infoContainerStyles = style({
@@ -20,6 +26,16 @@ export const infoContainerStyles = style({
   WebkitBackdropFilter: vars.color.glassBlur,
   boxShadow: vars.color.glassShadow,
   transition: "background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease",
+
+  "@media": {
+    "(max-width: 768px)": {
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "18px",
+      padding: "18px",
+      borderRadius: "20px",
+    },
+  },
 });
 
 export const avatarSectionStyles = style({
@@ -28,6 +44,12 @@ export const avatarSectionStyles = style({
   alignItems: "center",
   gap: "10px",
   flexShrink: 0,
+
+  "@media": {
+    "(max-width: 768px)": {
+      width: "100%",
+    },
+  },
 });
 
 export const userImgStyles = style({
@@ -37,6 +59,13 @@ export const userImgStyles = style({
   objectFit: "cover",
   border: `2px solid ${vars.color.glassBorder}`,
   boxShadow: vars.color.glassShadow,
+
+  "@media": {
+    "(max-width: 768px)": {
+      width: "72px",
+      height: "72px",
+    },
+  },
 });
 
 export const changePhotoButtonStyles = style({
@@ -55,6 +84,13 @@ export const changePhotoButtonStyles = style({
     backgroundColor: vars.color.glassHover,
     color: vars.color.text,
   },
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "4px 12px",
+      fontSize: "11px",
+    },
+  },
 });
 
 export const userInfoStyles = style({
@@ -62,12 +98,26 @@ export const userInfoStyles = style({
   flexDirection: "column",
   gap: "10px",
   flex: 1,
+
+  "@media": {
+    "(max-width: 768px)": {
+      width: "100%",
+      alignItems: "center",
+      textAlign: "center",
+    },
+  },
 });
 
 export const userNameStyles = style({
   fontSize: "20px",
   fontWeight: 600,
   color: vars.color.text,
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "18px",
+    },
+  },
 });
 
 export const editButtonStyles = style({
@@ -89,6 +139,13 @@ export const editButtonStyles = style({
     backgroundColor: vars.color.glassHover,
     color: vars.color.text,
   },
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "5px 12px",
+      fontSize: "11px",
+    },
+  },
 });
 
 export const logoutButtonStyles = style({
@@ -107,12 +164,26 @@ export const logoutButtonStyles = style({
   ":hover": {
     color: vars.color.text,
   },
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "5px 0",
+      fontSize: "11px",
+    },
+  },
 });
 
 export const headerActionsStyles = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
+
+  "@media": {
+    "(max-width: 768px)": {
+      gap: "12px",
+      flexWrap: "wrap",
+    },
+  },
 });
 
 export const editFormStyles = style({
@@ -125,11 +196,26 @@ export const editFormStyles = style({
   fontSize: "14px",
   fontWeight: 500,
   lineHeight: 1.5,
+
+  "@media": {
+    "(max-width: 768px)": {
+      maxWidth: "100%",
+      width: "100%",
+      fontSize: "13px",
+    },
+  },
 });
 
 export const editActionsStyles = style({
   display: "flex",
   gap: "8px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      justifyContent: "center",
+      flexWrap: "wrap",
+    },
+  },
 });
 
 export const saveButtonStyles = style({
@@ -147,6 +233,13 @@ export const saveButtonStyles = style({
     opacity: 0.88,
     transform: "translateY(-1px)",
   },
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "8px 18px",
+      fontSize: "12px",
+    },
+  },
 });
 
 export const cancelButtonStyles = style({
@@ -163,5 +256,12 @@ export const cancelButtonStyles = style({
   ":hover": {
     backgroundColor: vars.color.glassHover,
     color: vars.color.text,
+  },
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "8px 18px",
+      fontSize: "12px",
+    },
   },
 });

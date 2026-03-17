@@ -19,7 +19,6 @@ function CreateUserPage() {
     <ThemeProvider>
       <MenuActions />
       <Background />
-      <MenuActions />
       <div className={pageWrapperStyles}>
         <CreateUserView />
       </div>

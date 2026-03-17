@@ -6,10 +6,17 @@ export const goalCompleteContainerStyles = style({
   display: "flex",
   flexDirection: "column",
   gap: "12px",
-  width: "480px",
+  width: "min(100%, 480px)",
   margin: "0 auto",
   padding: "0 20px",
   position: "relative",
+
+  "@media": {
+    "(max-width: 768px)": {
+      width: "100%",
+      padding: 0,
+    },
+  },
 });
 
 export const messageStyles = style({
@@ -49,5 +56,13 @@ export const comletedButtonStyles = style({
 
   ":hover": {
     color: vars.color.text,
+  },
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "11px",
+      textAlign: "center",
+      padding: "4px 0",
+    },
   },
 });

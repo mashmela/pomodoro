@@ -11,6 +11,13 @@ export const viewStyles = style({
   width: "100%",
   overflow: "hidden",
   margin: "auto",
+
+  "@media": {
+    "(max-width: 768px)": {
+      gap: "20px",
+      paddingBottom: "8px",
+    },
+  },
 });
 
 export const modeLabelStyles = style({
@@ -20,6 +27,12 @@ export const modeLabelStyles = style({
   letterSpacing: "0.12em",
   textTransform: "uppercase",
   transition: "color 0.4s ease",
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "11px",
+    },
+  },
 });
 
 export const pomadorosContainerStyles = style({

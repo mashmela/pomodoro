@@ -12,11 +12,19 @@ export const settingsPageContainerStyles = style({
   display: "flex",
   flexDirection: "column",
   gap: "12px",
-  width: "480px",
+  width: "min(100%, 480px)",
   margin: "0 auto",
   padding: "0 20px",
   transition: "transform 0.32s cubic-bezier(0.4, 0, 0.2, 1)",
   position: "relative",
+
+  "@media": {
+    "(max-width: 768px)": {
+      gap: "10px",
+      padding: 0,
+      width: "100%",
+    },
+  },
 });
 
 export const settingsTitleStyles = style({
@@ -25,6 +33,13 @@ export const settingsTitleStyles = style({
   color: vars.color.text,
   marginBottom: "8px",
   letterSpacing: "-0.01em",
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "18px",
+      marginBottom: "4px",
+    },
+  },
 });
 
 export const settingsPageShiftedStyles = style({
@@ -32,7 +47,9 @@ export const settingsPageShiftedStyles = style({
 
   "@media": {
     "(max-width: 768px)": {
-      transform: "translateX(-85%)",
+      transform: "none",
+      opacity: 0.35,
+      pointerEvents: "none",
     },
   },
 });
@@ -45,6 +62,12 @@ export const inputContainerStyles = style({
   fontSize: "14px",
   fontWeight: 300,
   lineHeight: 1.5,
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "13px",
+    },
+  },
 });
 
 export const optionsPanelWrapperStyles = style({
@@ -63,8 +86,11 @@ export const optionsPanelWrapperStyles = style({
 
   "@media": {
     "(max-width: 768px)": {
-      width: "85%",
-      right: "-85%",
+      width: "min(100vw - 20px, 360px)",
+      right: "calc(-1 * min(100vw - 20px, 360px))",
+      height: "calc(100% - 12px)",
+      top: "6px",
+      borderRadius: "20px",
     },
   },
 });
@@ -77,6 +103,12 @@ export const optionsPanelContentStyles = style({
   padding: "24px",
   height: "100%",
   overflowY: "auto",
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "18px 16px",
+    },
+  },
 });
 
 export const optionsHeaderStyles = style({
@@ -86,6 +118,13 @@ export const optionsHeaderStyles = style({
   marginBottom: "20px",
   paddingBottom: "14px",
   borderBottom: `1px solid ${vars.color.glassBorder}`,
+
+  "@media": {
+    "(max-width: 768px)": {
+      marginBottom: "16px",
+      paddingBottom: "12px",
+    },
+  },
 });
 
 export const optionsTitleStyles = style({
@@ -93,6 +132,12 @@ export const optionsTitleStyles = style({
   fontWeight: 600,
   color: vars.color.text,
   margin: 0,
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "16px",
+    },
+  },
 });
 
 export const closeButtonStyles = style({
@@ -110,6 +155,13 @@ export const closeButtonStyles = style({
     backgroundColor: vars.color.glassHover,
     color: vars.color.text,
   },
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "20px",
+      padding: "4px 6px",
+    },
+  },
 });
 
 export const optionsListStyles = style({
@@ -119,6 +171,12 @@ export const optionsListStyles = style({
   display: "flex",
   flexDirection: "column",
   gap: "8px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      gap: "6px",
+    },
+  },
 });
 
 export const optionItemStyles = style({
@@ -134,6 +192,13 @@ export const optionItemStyles = style({
   ":hover": {
     backgroundColor: vars.color.glassHover,
     borderColor: vars.color.glassBorder,
+  },
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "12px 14px",
+      fontSize: "14px",
+    },
   },
 });
 
@@ -175,6 +240,14 @@ export const toggleRowStyles = style({
   ":active": {
     transform: "translateY(0)",
   },
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "15px 16px",
+      borderRadius: "14px",
+      fontSize: "14px",
+    },
+  },
 });
 
 export const toggleLabelStyles = style({
@@ -182,6 +255,12 @@ export const toggleLabelStyles = style({
   fontSize: "15px",
   fontWeight: 500,
   userSelect: "none",
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "14px",
+    },
+  },
 });
 
 export const toggleTrackStyles = style({
@@ -194,6 +273,13 @@ export const toggleTrackStyles = style({
   cursor: "pointer",
   transition: "background-color 0.25s ease",
   flexShrink: 0,
+
+  "@media": {
+    "(max-width: 768px)": {
+      width: "40px",
+      height: "24px",
+    },
+  },
 });
 
 export const toggleTrackActiveStyles = style({
@@ -211,10 +297,23 @@ export const toggleThumbStyles = style({
   backgroundColor: "white",
   boxShadow: "0 1px 4px rgba(0,0,0,0.25)",
   transition: "transform 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+
+  "@media": {
+    "(max-width: 768px)": {
+      width: "18px",
+      height: "18px",
+    },
+  },
 });
 
 export const toggleThumbActiveStyles = style({
   transform: "translateX(18px)",
+
+  "@media": {
+    "(max-width: 768px)": {
+      transform: "translateX(16px)",
+    },
+  },
 });
 
 export const sectionDividerStyles = style({
@@ -224,6 +323,13 @@ export const sectionDividerStyles = style({
   letterSpacing: "0.1em",
   textTransform: "uppercase",
   padding: "8px 4px 4px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "10px",
+      padding: "6px 2px 2px",
+    },
+  },
 });
 
 export const errorMessageStyles = style({
@@ -233,6 +339,12 @@ export const errorMessageStyles = style({
   padding: "8px",
   backgroundColor: "rgba(255, 68, 68, 0.1)",
   borderRadius: "4px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "13px",
+    },
+  },
 });
 
 export const successMessageStyles = style({
@@ -242,6 +354,12 @@ export const successMessageStyles = style({
   padding: "8px",
   backgroundColor: "rgba(0, 200, 81, 0.1)",
   borderRadius: "4px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "13px",
+    },
+  },
 });
 
 export const buttonContainerStyles = style({

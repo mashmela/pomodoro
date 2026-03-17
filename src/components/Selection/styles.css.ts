@@ -27,6 +27,14 @@ export const settingContainerStyles = style({
   ":active": {
     transform: "translateY(0)",
   },
+
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "15px 16px",
+      borderRadius: "14px",
+      fontSize: "14px",
+    },
+  },
 });
 
 export const selectionContainerStyles = style({
@@ -36,6 +44,13 @@ export const selectionContainerStyles = style({
   color: vars.color.accent,
   fontWeight: 600,
   fontSize: "14px",
+
+  "@media": {
+    "(max-width: 768px)": {
+      gap: "6px",
+      fontSize: "13px",
+    },
+  },
 });
 
 export const arrowStyles = style({

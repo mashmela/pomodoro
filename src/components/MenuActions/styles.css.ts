@@ -20,8 +20,14 @@ export const actionsStyles = style({
   boxShadow: vars.color.glassShadow,
   flexShrink: 0,
   transition: "background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease",
-  position: "absolute",
+  position: "fixed",
   zIndex: 1,
+
+  "@media": {
+    "(max-width: 768px)": {
+      display: "none",
+    },
+  },
 });
 
 export const actionsGroupStyles = style({
@@ -52,6 +58,15 @@ export const buttonIconStyles = style({
   ":active": {
     transform: "scale(0.92)",
   },
+
+  "@media": {
+    "(max-width: 768px)": {
+      width: "44px",
+      height: "44px",
+      padding: "8px",
+      flexShrink: 0,
+    },
+  },
 });
 
 export const iconStyles = style({
@@ -64,6 +79,13 @@ export const iconStyles = style({
   selectors: {
     [`${buttonIconStyles}:hover &`]: {
       opacity: 1,
+    },
+  },
+
+  "@media": {
+    "(max-width: 768px)": {
+      width: "20px",
+      height: "20px",
     },
   },
 });
@@ -81,5 +103,59 @@ export const imgUserStyles = style({
   ":hover": {
     transform: "scale(1.08)",
     borderColor: vars.color.accent,
+  },
+
+  "@media": {
+    "(max-width: 768px)": {
+      width: "44px",
+      height: "44px",
+    },
+  },
+});
+
+export const mobileActionsStyles = style({
+  display: "none",
+
+  "@media": {
+    "(max-width: 768px)": {
+      display: "grid",
+      gridTemplateColumns: "44px minmax(20px, 1fr) 44px 44px 44px",
+      alignItems: "center",
+      gap: "10px",
+      position: "fixed",
+      left: "16px",
+      right: "16px",
+      bottom: "calc(16px + env(safe-area-inset-bottom, 0px))",
+      padding: "10px 14px",
+      borderRadius: "22px",
+      backgroundColor: vars.color.glass,
+      border: `1px solid ${vars.color.glassBorder}`,
+      backdropFilter: vars.color.glassBlur,
+      WebkitBackdropFilter: vars.color.glassBlur,
+      boxShadow: vars.color.glassShadow,
+      zIndex: 20,
+    },
+  },
+});
+
+export const mobileSpacerStyles = style({
+  width: "100%",
+  minWidth: "20px",
+  height: "1px",
+});
+
+export const mobileProfileButtonStyles = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: 0,
+  border: "none",
+  background: "none",
+  cursor: "pointer",
+  borderRadius: "50%",
+  transition: "transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+
+  ":active": {
+    transform: "scale(0.92)",
   },
 });
